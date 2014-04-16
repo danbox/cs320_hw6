@@ -30,6 +30,8 @@ class WGraph:
         uf = UF.UF(self._verts)
         sortedWeights = copy.deepcopy(self._weights)
         sortedWeights.sort(key=lambda x: x[1])
+        for i, u, w in enumerate(sortedWeights):
+            if uf.find(self._verts[u][i]) == uf.find(self._verts)
 
 
 
