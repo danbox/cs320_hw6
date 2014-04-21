@@ -34,6 +34,10 @@ class UF:
     def union(self, dest, src):
         dest_id = self.find(dest)
         src_id = self.find(src)
+        if len(self._l[src_id]) > len(self._l[dest_id]):
+            temp = src_id
+            src_id = dest_id
+            dest_id = temp
         if dest_id == src_id:
             return False
         else:

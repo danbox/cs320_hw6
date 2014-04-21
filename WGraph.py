@@ -27,11 +27,17 @@ class WGraph:
         return edge_list
 
     def MST(self):
-        uf = UF.UF(self._verts)
-        sortedWeights = copy.deepcopy(self._weights)
-        sortedWeights.sort(key=lambda x: x[1])
-        for i, u, w in enumerate(sortedWeights):
-            if uf.find(self._verts[u][i]) == uf.find(self._verts)
+        uf = UF.UF(len(self._verts))
+        sorted_weights = copy.deepcopy(self._weights)
+        sorted_weights.sort(key=lambda x: x[1])
+        for i, u, w in enumerate(sorted_weights):
+            uf.union(0, u)
+        return uf
+
+    def MST2(self):
+        for i in range(self.getn()):
+
+        uf = UF.UF(len(self._verts))
 
 
 
